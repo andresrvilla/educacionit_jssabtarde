@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Operadores Logicos
+        && "y logico"
+        || "o logico"
+        !  "negacion"
+        */
+
+        var valorPrompt = prompt("Por favor ingrese un valor");
+        var valor = parseFloat(valorPrompt);
+        var facturaA = confirm("quiere una factura A?");
+
+        if(valor < 100 || facturaA == false){
+            alert("Hago factura B")
+        }else{
+            alert("Hago factura A");
+        }
+
+
+    </script>
+</body>
+</html>

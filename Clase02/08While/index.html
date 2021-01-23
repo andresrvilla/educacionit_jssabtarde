@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var edadPrompt = prompt("Ingrese su edad");
+        var edad = parseInt(edadPrompt);
+
+        // isNaN devuelve true cuando NO es un numero y false cuando es un numero
+        // isNaN(edad);
+        // edad sea mayor o igual a cero y edad sea menor a 150
+        /*
+        while(CONDICION) {
+            // codigo a ejecutar
+        }
+        */
+
+        while (isNaN(edad) || edad < 0 || edad > 150) {
+            edadPrompt = prompt("Ingrese su edad");
+            edad = parseInt(edadPrompt);
+        }
+
+        document.write(edad);
+
+    </script>
+</body>
+
+</html>

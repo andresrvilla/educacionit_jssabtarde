@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var suma = 0;
+        var cantidad = 0;
+
+        var ingresa;
+        do {
+            var numeroPrompt = prompt("Ingrese un numero");
+            console.log(numeroPrompt);
+            var numero = parseInt(numeroPrompt);
+            // suma = suma + numero;
+            // se puede escribir como
+            suma += numero; //tambien sirve para / * -
+            //cantidad = cantidad + 1;
+            // se puede escribir como
+            // cantidad += 1;
+            // o asi:
+            cantidad++; // si es -- resta 1
+            ingresa = confirm("Desea ingresar otro numero?");
+        } while(ingresa == true)
+
+        var promedio = suma / cantidad;
+        alert("El promedio es "+promedio);
+    </script>
+</body>
+</html>

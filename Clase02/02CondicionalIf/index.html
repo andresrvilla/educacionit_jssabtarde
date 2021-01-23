@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var edad = 15;
+        var booleanaVerdadero = true;
+        var booleanaFalso = false;
+
+        /*
+            if (CONDICION) {
+
+            }
+
+            OPERADORES DE COMPARACION
+            > "mayor"
+            < "menor"
+            >= "mayor o igual"
+            <= "menor o igual"
+            == "igualdad"
+            === "identico" "iguales en tipo y valor del dato" 
+            Por ejemplo 
+                0 == "0" -> true
+                0 === "0" -> false
+            != "desigual"
+            !== "distinto en tipo y valor de dato"
+        */
+
+        if (edad >= 18) {
+            alert("Es mayor de edad")
+        } else {
+            alert("Es menor de edad");
+        }
+
+        var confirmo = confirm("¿Desea continuar?");
+
+        if(confirmo == true){
+            alert("Confirmó!!! "+ confirmo);
+        }else{
+            alert("No confirmó "+confirmo);
+        }
+    </script>
+</body>
+</html>

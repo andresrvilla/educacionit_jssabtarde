@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var fecha = new Date(); //obtengo la fecha y hora actual
+        var pasado = new Date(
+            2021, //año
+            05, //mes
+            01, //dia
+            18, //hora
+            30, //minutos
+            15, //segundos
+            587 //milisegundos
+        );
+
+        alert(fecha);
+
+        alert(fecha.getFullYear()); //obtiene el año en formato yyyy
+        alert(fecha.getMonth()); //obtiene el mes 0 al 11
+        alert(fecha.getDate()); //dia del mes
+        alert(fecha.getHours()); //hora
+        alert(fecha.getMinutes()); //minutos
+        alert(fecha.getSeconds()); //segundos
+        alert(fecha.getMilliseconds()); //milisegundos
+        alert(fecha.getDay()); //dia de la semana del 0 (domingo) al 6 (Sabado)
+
+        var fechaCompleta = fecha.getDate() + "/" + (fecha.getMonth() + 1) + "/" + fecha.getFullYear();  
+        alert(fechaCompleta);
+    </script>
+</body>
+</html>

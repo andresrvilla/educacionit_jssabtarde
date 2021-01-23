@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var edad = 25;
+
+        if(edad >=18){
+            // Puede participar de los concursos
+            var numeroElegidoPrompt = prompt("Por favor ingrese un numero del 1 al 10");
+            var numeroElegido = parseInt(numeroElegidoPrompt);
+            if(numeroElegido == 5){
+                alert("Gano el sorteo");
+            } else{
+                alert("Siga participando");
+            }
+        } else {
+            alert("No puede participar del concurso por su edad");
+        }
+
+    </script>
+</body>
+</html>
