@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // JSON
+        // JavaScript Object Notation
+
+        var persona = {
+            "Nombre": "Andres",
+            Apellido: "Villa", //En JS si no le pongo comillas a la propiedad tambien funciona
+            Edad: 25,
+            Documento: {
+                Tipo: "DU",
+                Numero: 123123
+            },
+            Cursos: [
+                "CSharp",
+                "JS Desde Cero",
+                "Intro CSharp"
+            ]
+        };
+        console.log(persona);
+
+        persona.Edad = 30;
+        persona.Documento.Numero = 123124123;
+
+        console.log(persona);
+    </script>
+</body>
+</html>

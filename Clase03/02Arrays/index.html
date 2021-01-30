@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="contenedor"></div>
+    <div id="contenedorSimple"></div>
+    <script>
+        var arreglo = ["Andres","Villa","Instructor"];
+        console.log(arreglo);
+        
+        alert(arreglo);
+
+        //var elElemento = document.getElementById("contenedor");
+        //elElemento.innerHTML = arreglo;
+
+        document.getElementById("contenedor").innerHTML = arreglo;
+        document.getElementById("contenedorSimple").innerHTML = arreglo[1];
+
+        var otroArreglo = new Array("Andres","Villa","Instructor");
+        console.log(otroArreglo);
+        
+        alert(arreglo.length);
+    </script>
+</body>
+</html>

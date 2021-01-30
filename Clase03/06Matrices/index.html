@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="lista">
+       
+    </ul>
+    <script>
+        var curso = [];
+
+        var persona = ["Villa","Andres"];
+        curso.push(persona);
+
+        persona = ["Gomez","Pedro"];
+        curso.push(persona);
+
+        persona = ["Fernandez","Anabel"];
+        curso.push(persona);
+
+        console.log(curso);
+
+        for(var i = 0; i < curso.length; i++){
+            var texto ="";
+            for(var j = 0; j < curso[i].length; j++){
+                texto+= " " + curso[i][j];
+            }
+            var lista = document.getElementById("lista");
+            lista.innerHTML += "<li>"+texto+"</li>";
+        }
+    </script>
+</body>
+</html>

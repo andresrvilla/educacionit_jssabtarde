@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arreglo = [1,2,3,4,5,6,7];
+        //Agrego al final
+        arreglo.push(8);
+        document.write(arreglo+"<br>");
+
+        //quito del final
+        var elemento = arreglo.pop();
+        document.write(arreglo+"<br>");
+        document.write("Elemento extraido: "+elemento+"<br>");
+
+        //elimino el numero 3 y 4, agregando el texto "nuevo"
+        arreglo.splice(2,2,"nuevo");
+        document.write(arreglo+"<br>");
+
+        //No elimino nada (por eso pongo 0) y agrego el "nuevoTexto"
+        arreglo.splice(2,0,"nuevoTexto");
+        document.write(arreglo+"<br>");
+
+        // Agrego al principio
+        arreglo.unshift("principio");
+        document.write(arreglo+"<br>");
+
+        //Quitar del principio
+        arreglo.shift();
+        document.write(arreglo+"<br>");
+    </script>
+</body>
+</html>

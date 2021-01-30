@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="primerParrafo"></p>
+    <div id="unDiv"></div>
+    <input type="text" id="elementoInput" value="100" />
+    <script>
+        var elParrafo = document.getElementById("primerParrafo");
+        elParrafo.innerText = "El valor que quiero que tenga el parrafo";
+
+        var elDiv = document.getElementById("unDiv");
+        elDiv.innerHTML = "<b>Este es un texto creado desde JS</b>";
+
+        var elInput = document.getElementById("elementoInput");
+        elInput.value = "Reemplazo el valor";
+    </script>
+</body>
+</html>
