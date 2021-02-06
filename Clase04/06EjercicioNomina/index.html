@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yegor256/tacit@gh-pages/tacit-css.min.css"/>
+</head>
+<body>
+    <h1>Nómina de curso</h1>
+    <form>
+        Nombre:<br>
+        <input type="text" id="txtNombre" /><br>
+        Apellido:<br>
+        <input type="text" id="txtApellido" /><br>
+        Tipo:<br>
+        <select id="cmbTipo">
+            <option>Alumno</option>
+            <option>Instructor</option>
+            <option>Coordinador</option>
+        </select><br>
+        <button id="btnAgregar">Agregar</button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Tipo</th>
+                <th>Quitar</th>
+            </tr>
+        </thead>
+        <tbody id="cuerpoTabla">
+
+        </tbody>
+    </table>
+
+    <script>
+        var personas = [];
+        var contadorId = 0;
+
+        function AgregarANomina(evt){
+            var nombreElem = document.getElementById("txtNombre");
+            var nombre = nombreElem.value;
+            var apellidoElem = document.getElementById("txtApellido");
+            var apellido = apellidoElem.value;
+            var tipoElem = document.getElementById("cmbTipo");
+            var tipo = tipoElem.value;
+
+            if(nombre!="" && apellido != "" && tipo != "")
+            {
+                contadorId++;
+                var nuevaPersona = {
+                    Nombre: nombre,
+                    Apellido: apellido,
+                    Tipo: tipo,
+                    Id: contadorId
+                }
+                personas.push(nuevaPersona);
+                
+                var fila = "<tr>";
+                fila += "<td>"+nombre+"</td>";
+                fila += "<td>"+apellido+"</td>";
+                fila += "<td>"+tipo+"</td>";
+                fila += "<td><button onclick=\"QuitarPersona("+contadorId+")\">X</button></td>";
+                fila += "</tr>";
+
+                var cuerpo = document.getElementById("cuerpoTabla");
+                cuerpo.innerHTML += fila;
+
+                nombreElem.value="";
+                apellidoElem.value="";
+                tipoElem.selectedIndex = 0;
+                nombreElem.focus();
+            }            
+
+            evt.preventDefault();
+        }
+
+        function QuitarPersona(id){
+            var indice = -1;
+            for(var i = 0; i < personas.length; i++){
+                if(personas[i].Id == id){
+                    indice = i;
+                }
+            }
+            if(indice>=0){
+                alert("Quito la persona "+id+ " que se encuentra en el indice "+indice);
+            }
+            
+            // Completar con una funcion de arrays para remover el elemento
+            // Volver a dibujar la tabla sin el elemento que quite
+
+        }
+
+        document.getElementById("btnAgregar").onclick=AgregarANomina;
+    </script>
+</body>
+</html>

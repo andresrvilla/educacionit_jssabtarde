@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Numero uno: <br>
+    <input type="number" id="numeroUno" /><br>
+    +<br>
+    Numero dos: <br>
+    <input type="number" id="numeroDos" /><br>
+    <button id="btnCalculo">=</button><br>
+    <span id="spanResultado">RESULTADO</span>
+
+    <script>
+        function calcular(){
+            var elementoNumeroUno = document.getElementById("numeroUno");
+            var elementoNumeroDos = document.getElementById("numeroDos");
+
+            var valorUno = parseFloat(elementoNumeroUno.value);
+            var valorDos = parseFloat(elementoNumeroDos.value);
+
+            var resultadoSuma = valorUno + valorDos;
+            var elementoSpan = document.getElementById("spanResultado");
+            elementoSpan.innerHTML = "<b>"+resultadoSuma+"</b>";
+        }
+
+        var boton = document.getElementById("btnCalculo");
+        boton.onclick = calcular;
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button data-identificador="1" id="btnRojo">Rojo</button><br>
+    <button data-identificador="2" id="btnAzul">Azul</button><br>
+    <button data-identificador="3" id="btnNegro">Negro</button><br>
+    <button data-identificador="4" id="btnAmarillo">Amarillo</button><br>
+    <script>
+        function clickBoton(){
+            alert("Hizo Click "+ this.innerText+ " "+this.dataset.identificador);
+        }
+
+        document.getElementById("btnRojo").onclick=clickBoton;
+        document.getElementById("btnAzul").onclick=clickBoton;
+        document.getElementById("btnNegro").onclick=clickBoton;
+        document.getElementById("btnAmarillo").onclick=clickBoton;
+    </script>
+</body>
+</html>

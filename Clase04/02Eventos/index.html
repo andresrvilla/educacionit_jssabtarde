@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="alert('Termino de cargar')">
+    <button onclick="alert('Hola, me hiciste click')">Haceme click</button><br>
+    <button onmouseover="alert('Hola me pasaste el mouse por encima')">Acerca el cursor</button><br>
+    <button onmouseout="alert('Quitaste el cursor del boton')">Alejar</button><br>
+    <button onclick="hizoClick()">Haceme click! Desde una funcion</button>
+
+    <script>
+        function hizoClick(){
+            alert("Hizo click en el boton");
+        }
+    </script>
+</body>
+</html>

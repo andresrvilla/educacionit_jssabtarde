@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var valorUno = 100;
+        var valorDos = 200;
+        var valorTres = 400;
+
+        //var resultado = valorUno + valorDos;
+        var resultado = suma(valorUno,valorDos);
+
+        //resultado = resultado + valorTres;
+        resultado = suma(resultado,valorTres);
+
+        //resultado = resultado + valorDos;
+        resultado = suma(resultado,valorDos);
+
+        informarResultado(resultado);
+        informarResultado(resultado);
+        informarResultado(resultado);
+        informarResultado("Hola Mundo");
+        informarResultado(prefijo);
+        // Denominadas funciones
+        function suma(A,B){
+            var resultado = A + B;
+            return resultado;
+        }
+
+        // Denominado procedimiento (No tienen valor de retorno)
+        function informarResultado(res){
+            //variable local
+            var prefijo = "Resultado: ";
+            document.write(prefijo + res + "<br>");
+        }
+
+    </script>
+</body>
+</html>
