@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cuadrado {
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div class="cuadrado"></div>
+    <button id="btnOcultar">Ocultar</button><br>
+    <button id="btnMostrar">Mostrar</button><br>
+    <button id="btnToggle">Toggle</button><br>
+    <button id="btnFadeIn">Fade In</button><br>
+    <button id="btnFadeOut">Fade Out</button><br>
+    <button id="btnFadeToggle">Fade Toggle</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $("#btnOcultar").click(function(){
+            $(".cuadrado").hide(500,function(){
+                alert("Fin de la animacion");
+            });
+        })
+        $("#btnMostrar").click(function(){
+            $(".cuadrado").show(500,function(){
+                alert("Fin de la animacion");
+            });
+        })
+        $("#btnToggle").click(function(){
+            $(".cuadrado").toggle(500,function(){
+                alert("Fin de la animacion");
+            });
+            alert("No se ejecuta al final de la animacion");
+        })
+        $("#btnFadeIn").click(function(){
+            $(".cuadrado").fadeIn(500,function(){
+                alert("Fin de la animacion");
+            });
+        })
+        $("#btnFadeOut").click(function(){
+            $(".cuadrado").fadeOut(500,function(){
+                alert("Fin de la animacion");
+            });
+        })
+        $("#btnFadeToggle").click(function(){
+            $(".cuadrado").fadeToggle(500,function(){
+                alert("Fin de la animacion");
+            });
+        });
+    </script>
+</body>
+</html>

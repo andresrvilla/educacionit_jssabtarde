@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p></p>
+    <span></span><br>
+    <span></span><br>
+    <input type="text" id="txtEjemplo">
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        /*
+        $("SELECTOR CSS").METODO(parametro1,parametro2,...);
+        */
+       $("p").text("Hola Mundo"); // Equivalente al innerText
+       alert($("p").text()); //Si yo no uso parametro, leo el valor
+
+       //
+
+       /*var elementos = document.getElementsByTagName("span");
+       for(var i = 0; i< elementos.length; i++){
+           var e = elementos[i];
+           e.innerHTML = "<b>Hola mundo span</b>";
+       }*/
+
+       $("span").html("<b>Hola mundo span</b>"); //equivalente a innerHTML
+
+       $("#txtEjemplo").val("Hola mundo desde un input");
+    </script>
+</body>
+</html>
